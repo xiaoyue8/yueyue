@@ -17,6 +17,4 @@ urlpatterns = patterns('',
     url(r'^login/$','demo.views.login'),
     url(r'^index/$','demo.views.index'),
     url(r'^logout/$','demo.views.logout'),
-    url(r'^demo/$','demo.views.demo'),
-    url(r'^mayAndCatBus/$','demo.views.mayAndCatBus'),
 )

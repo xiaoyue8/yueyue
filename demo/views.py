@@ -34,4 +34,10 @@ def index(req):
 def logout(req):
 	if req.session['username']:
 		del req.session['username']
-	return HttpResponse('logout ok')		
+	return HttpResponse('logout ok')
+	
+def demo(req):
+	return render_to_response('demo.html')
+	
+def mayAndCatBus(req):
+	return render_to_response('mayAndCatBus.html')
