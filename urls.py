@@ -19,4 +19,8 @@ urlpatterns = patterns('',
     url(r'^logout/$','demo.views.logout'),
     url(r'^demo/$','demo.views.demo'),
     url(r'^mayAndCatBus/$','demo.views.mayAndCatBus'),
+    url(r'^$','demo.views.login'),
 )
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
