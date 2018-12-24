@@ -19,11 +19,14 @@ urlpatterns = patterns('',
     url(r'^logout/$','demo.views.logout'),
     url(r'^demo/$','demo.views.demo'),
     url(r'^mayAndCatBus/$','demo.views.mayAndCatBus'),
-    url(r'^$','demo.views.login'),
+    #url(r'^$','demo.views.login'),
     
+    url(r'^$','demo.views.yueLogin'),
+    url(r'^yue/login/$','demo.views.yueLogin'),    
     url(r'^yue/index/$','demo.views.yueIndex'),
     url(r'^yue/demo/$','demo.views.yueDemo'),
     url(r'^yue/mayAndCatBus/$','demo.views.yueMayAndCatBus'),
+    
 )
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns

@@ -54,6 +54,23 @@ def yueDemo(req):
 def yueMayAndCatBus(req):
 	return render_to_response('yue/mayAndCatBus.html')
 	
+def yueLogin(req):
+	if req.method == "POST":
+		uf = UserForm(req.POST)
+		if uf.is_valid():
+			username = uf.cleaned_data['username']
+			password = uf.cleaned_data['password']
+			
+			re = auth.authenticate(username=username,password=password)
+			if re is not None: 
+				req.session['username'] = username
+				return HttpResponseRedirect('/yue/index/')
+			else:
+				return HttpResponseRedirect('/yue/login/')
+	else :
+		uf = UserForm()
+	return render_to_response('yue/login.html',{'uf':uf})
+	
 
 	
 	
