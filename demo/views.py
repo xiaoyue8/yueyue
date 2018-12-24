@@ -46,3 +46,17 @@ def mayAndCatBus(req):
 def yueIndex(req):
 	username = req.session.get('username','')
 	return render_to_response('yue/index.html',{'username':username})
+	
+def yueDemo(req):
+	username = req.session.get('username','')
+	return render_to_response('yue/demo.html',{'username':username})
+
+def yueMayAndCatBus(req):
+	return render_to_response('yue/mayAndCatBus.html')
+	
+
+	
+	
+	
+		
+	

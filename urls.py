@@ -22,6 +22,8 @@ urlpatterns = patterns('',
     url(r'^$','demo.views.login'),
     
     url(r'^yue/index/$','demo.views.yueIndex'),
+    url(r'^yue/demo/$','demo.views.yueDemo'),
+    url(r'^yue/mayAndCatBus/$','demo.views.yueMayAndCatBus'),
 )
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
