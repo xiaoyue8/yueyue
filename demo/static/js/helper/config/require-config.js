@@ -41,5 +41,5 @@ require.config({
 
     },
     urlArgs:"v=201812210750",
-    waitSeconds: 10,
+    waitSeconds: 30,
 });

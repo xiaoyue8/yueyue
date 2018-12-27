@@ -2,3 +2,13 @@
 *.pyc
 *~
 *.db
+
+
+*.DS_Store
+demo/package-lock.json
+demo/node_modules/
+.sass-cache
+.DS_Store
+.sublime-gulp.cache
+
+demo/src/
