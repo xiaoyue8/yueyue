@@ -5,6 +5,8 @@ define(['jquery'],function($){
     var view = {
         // 一、main
         init:function () {
+        	/*Hover Status Compatible with IOS */
+			document.body.addEventListener('touchstart', function(events){}, false);
 			
         },
 

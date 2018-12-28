@@ -1,1 +1,1 @@
-define(["jquery"],function(e){});
+define(["jquery"],function(n){(function(){document.body.addEventListener("touchstart",function(n){},!1)})()});
