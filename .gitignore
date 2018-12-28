@@ -12,3 +12,7 @@ demo/node_modules/
 .sublime-gulp.cache
 
 demo/src/
+demo/.babelrc
+demo/config.rb
+demo/gulpfile.babel.js
+demo/package.json
