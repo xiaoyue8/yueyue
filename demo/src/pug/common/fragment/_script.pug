@@ -1,0 +1,8 @@
+//-
+    脚本组件
+mixin script(desc)
+    script(src="/static/js/vendor/require/require.js")
+    script.
+        require(['/static/js/helper/config/require-config.js?v=${initParam.timestamp}'], function () {
+            require(['#{desc}']);
+        });

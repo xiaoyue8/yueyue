@@ -11,8 +11,9 @@ demo/node_modules/
 .DS_Store
 .sublime-gulp.cache
 
-demo/src/
-demo/.babelrc
-demo/config.rb
-demo/gulpfile.babel.js
-demo/package.json
+# demo/src/
+# demo/.babelrc
+# demo/config.rb
+# demo/gulpfile.babel.js
+# demo/package.json
+demo/src/img/

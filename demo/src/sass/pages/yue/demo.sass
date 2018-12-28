@@ -1,0 +1,41 @@
+@import "../common/common"
+@import "../../vendor/timeline"
+
+html
+	font-size: 75%
+
+.cd-timeline-block
+	margin-top: 50px
+.christmas-bg
+	&>.cd-timeline-content
+		background-image: url('/static/img/pages/yue/demo/20181224-0.gif')
+		background-position: top center
+		&>img:first-child
+			position: absolute
+			width: 100px
+			top: -39px
+			right: -20px
+		:before
+			border-right-color: #aa0c0c
+		&>h2,&>span
+			color: gold
+			text-shadow: -1px -1px #fff, 1px 1px #666
+		&>p>img
+			border-radius: 50%
+
+
+#jsi-snow-container
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+main
+	position: relative
+	z-index: 999
+	overflow-x: hidden
+body
+	// background-color: #071a07
+	background-color: #062932
+	padding-top: 20px

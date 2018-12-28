@@ -1,0 +1,155 @@
+// 需要sass版本3.4.25+才能编译,因此选择了直接引用
+\:root
+  --white: #fff
+  --cl_1: #D008AF
+  --cl_2: #F92D4B
+  --bg-gr_1: linear-gradient(to right,var(--cl_1),var(--cl_2))
+  --cl_3: #FEC901
+  --cl_4: #FE0C34
+  --bg-gr_2: linear-gradient(to right,var(--cl_3),var(--cl_4))
+  --cl_5: #559DF3
+  --cl_6: #9114D0
+  --bg-gr_3: linear-gradient(to right,var(--cl_5),var(--cl_6))
+  --cl_7: #2CD190
+  --cl_8: #138FC8
+  --bg-gr_4: linear-gradient(to right,var(--cl_7),var(--cl_8))
+
+.serviceBox
+  font-family: 'Niramit', sans-serif
+  text-align: center
+  padding: 100px 0 0
+  margin: 80px 10px 0
+  border-left: 3px solid var(--cl_1)
+  position: relative
+  z-index: 1
+
+.serviceBox:before,
+.serviceBox:after
+  content: ''
+  background-color: var(--cl_1)
+  height: 3px
+  width: 50%
+  position: absolute
+  left: 0
+  top: 0
+  z-index: -2
+
+.serviceBox:after
+  background: var(--bg-gr_1)
+  width: 100%
+  top: auto
+  bottom: 0
+
+.serviceBox .service-icon
+  color: var(--white)
+  background: var(--bg-gr_1)
+  font-size: 70px
+  line-height: 140px
+  width: 140px
+  height: 140px
+  margin: 0 auto
+  border-radius: 50%
+  position: absolute
+  top: -70px
+  left: 0
+  right: 0
+  z-index: 1
+  transition: all 0.3s
+
+.serviceBox:hover .service-icon
+  font-size: 60px
+
+.serviceBox .service-icon:before,
+.serviceBox .service-icon:after
+  content: ''
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  height: 96%
+  width: 96%
+  border: 10px solid var(--white)
+  border-radius: 50%
+  z-index: -1
+
+.serviceBox .service-icon:after
+  border: none
+  background: var(--bg-gr_1)
+  height: 82%
+  width: 82%
+  z-index: -1
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+  transition: all 0.3s
+
+.serviceBox:hover .service-icon:after
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 10px var(--white) inset
+
+.serviceBox .service-content
+  padding: 0 20px 20px
+  border-right: 3px solid var(--cl_2)
+
+.serviceBox .title
+  color: var(--cl_1)
+  font-size: 20px
+  text-transform: capitalize
+  margin: 0 0 10px
+
+.serviceBox .description
+  color: #707070
+  font-size: 15px
+  line-height: 27px
+
+.serviceBox.yellow:after,
+.serviceBox.yellow .service-icon,
+.serviceBox.yellow .service-icon:after
+  background: linear-gradient(to right, var(--cl_3), var(--cl_4))
+
+.serviceBox.yellow:before
+  background-color: var(--cl_3)
+
+.serviceBox.yellow
+  border-left-color: var(--cl_3)
+
+.serviceBox.yellow .service-content
+  border-right-color: var(--cl_4)
+
+.serviceBox.yellow .title
+  color: var(--cl_4)
+
+.serviceBox.blue:after,
+.serviceBox.blue .service-icon,
+.serviceBox.blue .service-icon:after
+  background: var(--bg-gr_3)
+
+.serviceBox.blue:before
+  background-color: var(--cl_5)
+
+.serviceBox.blue
+  border-left-color: var(--cl_5)
+
+.serviceBox.blue .service-content
+  border-right-color: var(--cl_6)
+
+.serviceBox.blue .title
+  color: var(--cl_6)
+
+.serviceBox.green:after,
+.serviceBox.green .service-icon,
+.serviceBox.green .service-icon:after
+  background: var(--bg-gr_4)
+
+.serviceBox.green:before
+  background-color: var(--cl_7)
+
+.serviceBox.green
+  border-left-color: var(--cl_7)
+
+.serviceBox.green .service-content
+  border-right-color: var(--cl_8)
+
+.serviceBox.green .title
+  color: var(--cl_8)
+
+@media only screen and (max-width: 990px)
+  .serviceBox
+    margin: 100px 0 0
