@@ -1,7 +1,12 @@
 /**
  * Created by lipeng on 18/11/27.
  */
-define(['wxShare'],function(wxShare){
+define([
+        // 'wxShare'
+    ],function(
+        // wxShare
+    ){
+
     var view = {
         // 一、main
         init:function () {
@@ -9,7 +14,9 @@ define(['wxShare'],function(wxShare){
 			document.body.addEventListener('touchstart', function(events){}, false);
 
             // 微信分享配置
-            view.wxShareConfig()	
+            // view.wxShareConfig()	
+
+            
         },
 
         // 二、logic
