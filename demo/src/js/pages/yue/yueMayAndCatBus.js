@@ -11,12 +11,16 @@ define([
         // 一、main
         init:function () {
         	/*Hover Status Compatible with IOS */
-			document.body.addEventListener('touchstart', function(events){}, false);
+			document.body.addEventListener('touchstart', function(event){
+                // 兼容移动端自动播放
+                if(!view.audoPlayStatus){
+                    document.getElementById('audio').play();
+                    view.audoPlayStatus = true;
+                }
+            }, false);
 
             // 微信分享配置
             // view.wxShareConfig()	
-
-            
         },
 
         // 二、logic
@@ -45,6 +49,7 @@ define([
         },
 
         // 四、general
+        audoPlayStatus:false
         
     };
     view.init();
