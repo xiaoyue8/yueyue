@@ -3,28 +3,33 @@
  */
 define(['wxConfig','jquery'], function(wx,$){
     var wxShareModel = {
-        args:{},
-        getShareConfig:function () {
-            $.ajax({
-                url : "/redEnvelope/getWechatConfig",
-                type : "post",
-                dataType : "json",
-                data : {
-                    url : window.location.href
-                },
-                success : function(data) {
-                    if (data.errorCode != undefined) {
-                    } else if (data.result) {
-                    } else {
-                        wxShareModel.args = data;
-                    }
-                },
-                error : function() {
-
-                }
-            });
-            return this
+        args:{
+            "appId":"wxb6e23db4b284e226",
+            "timestamp":"1545990133",
+            "noncestr":"uXfbB5",
+            "signature":"ee76eef5a1813cdfb2b59e47cdc2de19ce9119ac"
         },
+        // getShareConfig:function () {
+        //     $.ajax({
+        //         url : "/redEnvelope/getWechatConfig",
+        //         type : "post",
+        //         dataType : "json",
+        //         data : {
+        //             url : window.location.href
+        //         },
+        //         success : function(data) {
+        //             if (data.errorCode != undefined) {
+        //             } else if (data.result) {
+        //             } else {
+        //                 wxShareModel.args = data;
+        //             }
+        //         },
+        //         error : function() {
+
+        //         }
+        //     });
+        //     return this
+        // },
         setShareConfig:function (wxConfig) {
             wx.config({
                 debug : wxConfig.debug || false, // 本地微信开发者工具debug调试
@@ -93,5 +98,5 @@ define(['wxConfig','jquery'], function(wx,$){
             });
         }
     };
-    return wxShareModel.getShareConfig().setShareConfig;
+    return wxShareModel.setShareConfig;
 });

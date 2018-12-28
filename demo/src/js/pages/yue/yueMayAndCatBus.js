@@ -7,7 +7,9 @@ define(['wxShare'],function(wxShare){
         init:function () {
         	/*Hover Status Compatible with IOS */
 			document.body.addEventListener('touchstart', function(events){}, false);
-			
+
+            // 微信分享配置
+            view.wxShareConfig()	
         },
 
         // 二、logic
@@ -30,7 +32,7 @@ define(['wxShare'],function(wxShare){
                     qZone: link+'&_ch=x.m.qqkj_brand'
                 };
 
-                wxShare(wxConfig);
+                wxShare(wxConfig); 
             }
         },
 

@@ -20,6 +20,8 @@ require.config({
         // canvas高清画图工具
         canvasHidpi:'vendor/canvas/hidpi-canvas.min',
         // 2.工具类(第三方)
+        // 2.1 微信接口
+        wxConfig:'//res.wx.qq.com/open/js/jweixin-1.0.0',
 
         // 二.自定义
         // 1.工具类
@@ -27,6 +29,8 @@ require.config({
         domain:'helper/config/domain',
         // api请求插件
         request:'helper/util/request',
+        // 分享接口
+        wxShare:'helper/util/wxShare',
         // 2.组件
         // 渲染数据插件
         renderData:'helper/component/plugin/renderData',
